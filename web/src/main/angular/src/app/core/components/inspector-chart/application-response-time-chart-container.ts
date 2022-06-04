@@ -84,6 +84,10 @@ export class ApplicationResponseTimeChartContainer implements IInspectorChartCon
         };
     }
 
+    makeTooltipOptions(): {[key: string]: any} {
+        return {};
+    }
+
     convertWithUnit(value: number): string {
         const unitList = ['ms', 'sec'];
 

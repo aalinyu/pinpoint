@@ -72,6 +72,10 @@ export class AgentLoadedCLassCountChartContainer implements IInspectorChartConta
         };
     }
 
+    makeTooltipOptions(): {[key: string]: any} {
+        return {};
+    }
+
     convertWithUnit(value: number): string {
         return value.toString();
     }

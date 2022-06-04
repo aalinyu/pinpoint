@@ -32,6 +32,7 @@ public class FluxAndMonoSubscribeInterceptor extends AsyncContextSpanEventSimple
         this.serviceType = serviceType;
     }
 
+    // AsyncContext must exist in Target for tracking.
     public AsyncContext getAsyncContext(Object target, Object[] args) {
         if (checkTargetReactorContextAccessor(target, args)) {
             return AsyncContextAccessorUtils.getAsyncContext(target);
